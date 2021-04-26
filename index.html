@@ -1,0 +1,39 @@
+<!--
+ * @Author: Qiuxue.Wu - LCFC
+ * @Date: 2021-04-26 09:19:37
+ * @LastEditors: Qiuxue.Wu - LCFC
+ * @LastEditTime: 2021-04-26 23:10:26
+ * @Description: file content
+ * @FilePath: \requirejs\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script src="./lib/require.js"></script>
+<script>
+    require.config({
+        paths: {
+            log: "./js/log.js",
+            red: "./js/red.js",
+            blue: "./js/blue.js",
+            hybrid: "./js/hybrid.js"
+        }
+    })
+
+    require(['log', 'hybrid'], (log, hybrid) => {
+        log.getLog();
+        hybrid.getHybrid()
+    })
+
+
+</script>
+
+</html>
